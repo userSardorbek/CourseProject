@@ -4,7 +4,6 @@ namespace Api.Model;
 
 public class TemplateAccess
 {
-
     public int TemplateAccessId { get; set; }
 
     public long TemplateId { get; set; }

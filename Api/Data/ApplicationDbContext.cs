@@ -35,6 +35,10 @@ public class ApplicationDbContext : IdentityDbContext<User>
             .HasIndex(l => new { l.UserId, l.TemplateId })
             .IsUnique();
         
+        modelBuilder.Entity<TemplateAccess>()
+            .HasIndex(x => new { x.UserId, x.TemplateId })
+            .IsUnique();
+        
         // Configure many-to-many relationship between Template and Tag
         modelBuilder.Entity<Template>()
             .HasMany(t => t.Tags)

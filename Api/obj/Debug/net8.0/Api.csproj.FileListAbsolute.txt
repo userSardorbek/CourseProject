@@ -117,3 +117,4 @@ D:\SARDORBEK\Iteration\solutions\CourseProject\Api\obj\Debug\net8.0\refint\Api.d
 D:\SARDORBEK\Iteration\solutions\CourseProject\Api\obj\Debug\net8.0\Api.pdb
 D:\SARDORBEK\Iteration\solutions\CourseProject\Api\obj\Debug\net8.0\Api.genruntimeconfig.cache
 D:\SARDORBEK\Iteration\solutions\CourseProject\Api\obj\Debug\net8.0\ref\Api.dll
+D:\SARDORBEK\Iteration\solutions\CourseProject\Api\obj\Debug\net8.0\Api.sourcelink.json

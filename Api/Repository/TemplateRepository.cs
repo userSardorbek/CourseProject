@@ -21,7 +21,7 @@ public class TemplateRepository : ITemplateRepository
         return await _context.Templates.Select(t => new TemplateDto()
             {
                 TemplateId = t.TemplateId, Description = t.Description, Title = t.Title, Topic = t.Topic,
-                CreationDate = t.CreationDate, ImageUrl = t.ImageUrl, IsPublic = t.IsPublic
+                CreationDate = t.CreationDate, ImageUrl = t.ImageUrl, IsPublic = t.IsPublic, CreatorId = t.CreatorId
             }
         ).ToListAsync();
     }

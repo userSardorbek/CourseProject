@@ -31,10 +31,10 @@ public class UserController : ControllerBase
             return BadRequest(new ApiResponse<ReturnUserDto>("Your request model is invalid"));
 
         var user = await _userManager.Users.FirstOrDefaultAsync(x => x.UserName == loginDto.Username);
-        if (user == null) return Unauthorized("Invalid username!");
+        if (user == null) return Unauthorized(new ApiResponse<ReturnUserDto>("Invalid user name"));
 
         var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
-        if (!result.Succeeded) return Unauthorized("Username not found and/or password incorrect");
+        if (!result.Succeeded) return Unauthorized(new ApiResponse<ReturnUserDto>("Username not found and/or password incorrect"));
 
         var roles = await _userManager.GetRolesAsync(user);
 
